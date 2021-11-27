@@ -318,7 +318,6 @@ double dSID_render() {
         reso = (sid.M[0x17] > 0x5F) ? 8.0 / (double) (sid.M[0x17] >> 4) : 1.41;
     }
 
-
     double tmp = flin + sid.SIDct->pbp * reso + sid.SIDct->plp;
     if (sid.M[0x18] & HP)
         output -= tmp;
