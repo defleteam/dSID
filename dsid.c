@@ -22,6 +22,9 @@ const int Aexp[256] = {
     1, 1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 1, 1, 1, 1, 1, 1};
 
 double cmbWF(int chn, int *wfa, int index, int differ6581, struct SID_globals *g) {
+    if (differ6581 && sid.g.model == 6581)
+        index &= 0x7FF;
+
     return wfa[index];
 }
 
